@@ -1,0 +1,2 @@
+# stumpwm
+stumpwm dotfiles
