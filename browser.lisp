@@ -21,11 +21,11 @@
 ;; ### NEW VERSION
 (defun select-from-menu-visit-in-browser (list-pairs)
   (let ((valid-content (cadr (select-from-menu
-		       (current-screen)
-		       list-pairs))))
+			      (current-screen)
+			      list-pairs))))
     (and valid-content (run-shell-command
-		 (format nil "chromium --new-window ~A" valid-content)))))
-					   
+			(format nil "chromium --new-window ~A" valid-content)))))
+
 
 (defcommand fsites () ()
   (select-from-menu-visit-in-browser
