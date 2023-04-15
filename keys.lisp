@@ -2,7 +2,7 @@
 ;; WINDOW
 (define-key *top-map* (kbd "s-f") "fullscreen")
 (define-key *top-map* (kbd "s-Q") "my/kill-window")
-(define-key *top-map* (kbd "s-q") "kill-window")
+(define-key *top-map* (kbd "s-q") "delete-window")
 (define-key *top-map* (kbd "s-a") "my/hsplit-and-focus")
 (define-key *top-map* (kbd "s-s") "my/vsplit-and-focus")
 
@@ -14,14 +14,23 @@
 (define-key *top-map* (kbd "s-j") "move-focus down")
 (define-key *top-map* (kbd "s-k") "move-focus up")
 (define-key *top-map* (kbd "s-o") "fother")
+(define-key *top-map* (kbd "s-O") "only")
+
+(define-key *top-map* (kbd "s-.") "colon")
+
+(define-key *top-map* (kbd "XF86MonBrightnessUp") 
+	    "exec brightnessctl set +10%")
+(define-key *top-map* (kbd "XF86MonBrightnessDown") 
+	    "exec brightnessctl set 10%-")
 
 
 
 ;; PROGRAMS
-(define-key *top-map* (kbd "s-8") "exec nautilus --new-window")
-(define-key *top-map* (kbd "s-9") "exec emacsclient -c -a emacs")
-
+(define-key *top-map* (kbd "s-7") "exec nautilus --new-window")
+(define-key *top-map* (kbd "s-8") "exec chromium")
+(define-key *top-map* (kbd "s-9") "exec emacsclient --create-frame --alternate-editor=\"\"")
 (define-key *top-map* (kbd "s-0") "exec xterm")
+
 
 
 
